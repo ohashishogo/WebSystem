@@ -1,0 +1,354 @@
+body{
+  width:100%;
+  height:1080px;
+  display: flex;  /* 横並び */
+  flex-direction: column;/*コンテナ内のアイテムの配置方向*/
+  margin: 0px;/*枠の外*/
+}
+ /* 一番上のバー */
+.topNavigation{
+  width: 100%;
+  height: 40px;
+  background-color: white;
+}
+main{
+  min-height: 100vh;/**/
+  display: flex;
+}
+ /* サイドバー */
+.sidebar{
+  width: 250px;
+  height:883px;
+  text-align: center;
+  background-color: #505050;
+  color: #fff;
+}
+ /* a */
+.content{
+  flex: 1;
+  background-color: #eee;
+}
+/* パンくずリスト */
+.breadcrumbs{
+  width: auto;
+  height: 33px;
+  background-color: #dcdcdc;
+}
+/*パンくずリストの中身*/
+.breadcrumbs li{
+  display: inline-block;
+  list-style: none;
+  font-size:20px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+ /*リストの後ろの文字列*/
+.breadcrumbs li:after {
+  content: '>';
+  padding: 0 3px;
+  color: #555;
+}
+/*リストの最初の子要素*/
+.breadcrumbs li:first-child{
+  margin-left: 20px;
+}
+/*リストの最後の子要素*/
+.breadcrumbs li:last-child:after {
+  content: '';
+}
+/*パンくずリストのリンク*/
+.breadcrumbs li a {
+  text-decoration: none;
+  color: #5295ee;
+}
+/*パンくずリストのリンクをホバー時*/
+.breadcrumbs li a:hover {
+  text-decoration: underline;
+}
+/* タイトルバー */
+.titlebar{
+  width: 100%;
+  height: 50px;
+  background-color: #c8c8c8;
+  border-bottom: solid 3px #b4b4b4;
+  font-size: 42px;
+  font-weight: normal ;
+}
+/* 検索項目全体 */
+.searchbox{
+  width: auto;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  background-color: white;
+  border-style: solid;
+  border-color: #646464;
+  border-radius: 10px;
+  font-size: 24px;
+}
+ /* 学生状態の枠 */
+.statusbox{
+  width: 430px;
+  height: 40px;
+  position: relative;
+  bottom: 23px;
+  right: 10px;
+  border-radius: 10px;
+  border: solid black 2px;
+}
+ /* 検索項目のテキストをラップ */
+.searchbox_txtwrapper{
+  margin-left: 30px;
+}
+/* 検索項目の文字 */
+.searchbox_txt1{
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+/* 入学年度の文字 */
+.searchbox_txt2{
+  margin-top: -10px;
+}
+ /* 学科コースの文字 */
+.searchbox_txt3{
+  margin-top: -10px;
+}
+/* 学生状態の文字*/
+.searchbox_txt4{
+ margin-top: 5px;
+ margin-left: 10px;
+}
+/* 検索ボタン */
+.search_b{
+  width: 90px;
+  height: 40px;
+  position: relative;
+  bottom: 60px;
+  right: 10px;
+  float: right;
+  font-size: 20px;
+  border-radius: 5px;
+  border-color: solid black 2px;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+/*　検索結果の枠　*/
+.searchresult{
+  width: auto;
+  height: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  background-color: white;
+  border-style: solid;
+  border-color: #646464;
+  border-radius: 10px;
+}
+/* ホームボタン */
+.home_b{
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 37px;
+  color: white;
+  outline: none;
+  border-bottom: solid white 2px;
+  text-align: right;
+}
+.home_b_img{ /* ホームボタンの画像 */
+  width: 45px;
+  height: 40px;
+  position: relative;
+  right: 170px;
+  top: 5px;
+  outline: none;
+  cursor: default;
+}
+.home_b:hover{ /* ホームボタン：ホバー時 */
+  background: #646464;
+  color: white;
+}
+.attendance_b{ /* 出席管理ボタン */
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: white;
+  outline: none;
+}
+.attendance_b:hover{
+  background: #646464;
+  color: white;
+
+}
+.student_b{ /* 生徒管理 */
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: white;
+  outline: none;
+}
+.student_b:hover{
+  background: #646464;
+  color: white;
+}
+.teacher_b{ /* 教員管理ボタン */
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: white;
+  outline: none;
+}
+.teacher_b:hover{
+  background: #646464;
+  color: white;
+}
+.class_b{ /* クラス管理ボタン */
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: white;
+  outline: none;
+}
+.class_b:hover{
+  background: #646464;
+  color: white;
+}
+.classwork_b{ /* 授業管理ボタン */
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: white;
+  outline: none;
+}
+.classwork:hover{
+  background: #646464;
+  color: white;
+}
+.classroom_b{ /* 教室管理ボタン */
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: white;
+  outline: none;
+}
+.classroom_b:hover{
+  background: #646464;
+  color: white;
+}
+.subject_b{ /* 学科管理ボタン */
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: white;
+  outline: none;
+}
+.subject_b:hover{
+  background: #646464;
+  color: white;
+}
+.buttonWrapper{ /* ボタンをラップ */
+  float: right;
+}
+.registration_b{ /* 登録ボタン */
+  width: 200px;
+  height: 50px;
+  border: 0;
+  border-right: solid 3px #969696;
+  border-left: solid 3px #969696;
+  background-color: #c8c8c8;
+  font-size: 40px;
+  outline: none;
+  float:right;
+}
+.registration_b_img{ /* 登録ボタンの画像 */
+  width: 50px;
+  height: 40px;
+  position: relative;
+  top: 5px;
+  outline: none;
+  cursor: default;
+}
+.registration_b:hover{ /* 登録ボタン：ホバー時 */
+  border-top: solid 2px white;
+}
+.graduate_b{ /* 卒業処理ボタン */
+  width: 230px;
+  height: 50px;
+  border: 0;
+  border-right: solid 3px #969696;
+  background-color: #c8c8c8;
+  font-size: 38px;
+  outline: none;
+  float: right;
+}
+.graduate_b_img{ /* 卒業処理ボタンの画像 */
+  width: 50px;
+  height: 40px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  outline: none;
+  cursor: default;
+}
+.graduate_b:hover{
+  border-top: solid 2px white;
+}
+.logout_b{ /* ログアウトボタン */
+  width: 50px;
+  height: 40px;
+  border: 0;
+  background-color: #323232;
+  outline: none;
+  border-radius: 10px;
+  float: right;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  transition: .6s;
+  line-height : 2.4em;
+}
+.logout_b .caption{
+	font-size: 28px;
+	text-align: right;
+  position: relative;
+  right: 10px;
+  top: 3px;
+	color: #fff;
+}
+.logout_b .mask{
+	width: 200px;
+	position:	relative;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	#646464;
+	-webkit-transition:	all 0.2s ease;
+	transition:		all 0.2s ease;
+}
+.logout_b:hover .mask {
+	opacity:		1;	/* マスクを表示する */
+}
+.logout_b:hover{
+  background: #646464;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  width: 200px;
+}
+.logout_b_img{ /* ログアウトボタンの画像 */
+  width: 35px;
+  height: 30px;
+  position: relative;
+  bottom: 28px;
+  outline: none;
+  float: left;
+  cursor: default;
+}
