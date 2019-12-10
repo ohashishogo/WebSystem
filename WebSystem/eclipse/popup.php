@@ -10,34 +10,42 @@
   </div>
 <div class="Choice">
   <p>登録データ選択</p>
-  <input type="radio" name="room" value="教室" id="room1" required><label for="room1">教室</label>  <!--ラジオボタン　どっちか選択-->
-  <input type="radio" name="room" value="教室分類" id="room2"><label for="room2">教室分類</label></br>
+  <form name="roomInfo" id="roomInfo" method="post" action="#">
+  <input type="radio" name="number" value="教室" id="room1"  checked onClick="changeDisabled()" required><label for="room1">教室</label>  <!--ラジオボタン　どっちか選択-->
+
+  <input type="radio" name="number" value="教室分類" id="room2" onClick="changeDisabled()"><label for="room2">教室分類</label></br>
   </div>
 
+  <script type="text/javascript">
+
+function changeDisabled() {
+    if ( document.roomInfo["number"][0].checked ) {
+        document . roomInfo["m_classroom_id"] . disabled = false;
+        document . roomInfo["m_classroom"] . disabled = false;
+        document . roomInfo["m_classroom_name"] . disabled = false;
+    } else {
+        document . roomInfo["m_classroom_id"] . disabled = true;
+        document . roomInfo["m_classroom"] . disabled = true;
+        document . roomInfo["m_classroom_name"] . disabled =  false;
+    }
+}
+window.onload = changeDisabled;
+
+</script>
+
   <p>教室</p>
-  <p>教室番号  <input type="text"  id="input1","input2" value=""></p>
-
-
-
+  <p>教室番号<input type="text" pattern="^[0-9]+$" id="m_classroom_id"></p>
   <p>教室形態
-    <select name="example">
-<option value="サンプル1">サンプル1</option>
-<option value="サンプル2">サンプル2</option>
-<option value="サンプル3">サンプル3</option>
-
-</select>
-
-
+    <select name="example" id="m_classroom">
+      <option value="サンプル1">サンプル1</option>
+      <option value="サンプル2">サンプル2</option>
+      <option value="サンプル3">サンプル3</option>
+    </select>
   </p>
-
-  <tr>
-      <td><input  type="text" name="namae" id="input1" value=""></td>
-  </tr>
-
   <br>
   <p>教室分類</p>
-  <p>教室形態番号 <input type="text" name="namae"> </p>
-  <p>教室形態名  <input type="text" name="namae"></p>
-<script type="text/javascript" src="js/db/text.js"></script>
+  <p>教室形態番号<input type="text" name="namae" id="m_classroomform_id"> </p>
+  <p>教室形態名<input type="text" name="namae" stle="ime-mode: active;"id="m_classroom_name"></p>
+  </form>
 </body>
 </html>
