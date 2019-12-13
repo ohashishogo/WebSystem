@@ -23,7 +23,7 @@ require('../Layout/Layout.php');
         <script>
 	var myWindow;
 	function openWin() {
-	myWindow = window.open('popup.php', 'myWindow', 'top=100,left=300,width=500,height=800');
+	myWindow = window.open('room-add.php', 'myWindow', 'top=100,left=300,width=500,height=800');
 	}
 </script>
     </div>
